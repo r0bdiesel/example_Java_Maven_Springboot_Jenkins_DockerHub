@@ -28,6 +28,12 @@ pipeline {
 		sh 'mvn test'
             }
         }
+	stage('Package') {
+            steps {
+                echo "${env.STAGE_NAME}ing.."
+		sh 'mvn package'
+            }
+        }
 	stage('Docker Build') {
             steps {
                 echo "${env.STAGE_NAME} Stage"
