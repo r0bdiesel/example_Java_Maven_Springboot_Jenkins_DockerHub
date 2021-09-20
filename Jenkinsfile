@@ -23,6 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "${env.STAGE_NAME}ing.."
+		sh 'mvn test'
             }
         }
 	stage('Docker Build') {
