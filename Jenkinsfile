@@ -18,6 +18,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "${env.STAGE_NAME}ing.. ${env.BUILD_ID} on ${env.JENKINS_URL}"
+		sh 'mvn clean'
+		sh 'mvn compile'
             }
         }
         stage('Test') {
