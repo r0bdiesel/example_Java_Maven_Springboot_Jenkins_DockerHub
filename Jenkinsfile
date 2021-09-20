@@ -59,6 +59,7 @@ pipeline {
 
 void antEchoVersions() {
   echo "UNIX"
+	sh 'mvn -version'
 	sh 'java -version'
 	sh 'git --version'
 	echo "inDockerEnv:${IN_DOCKER_ENV}"
