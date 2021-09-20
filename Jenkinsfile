@@ -49,6 +49,7 @@ pipeline {
 	stage('Push Image to DockerHub') {
       	    steps{
 	     	echo "${REGISTRY}"
+		sh 'docker push r0bdiesel/example_Java_Maven_Springboot_Jenkins_DockerHub:latest'
              }
          }
 	 stage('DockerHub Logout') {
