@@ -10,4 +10,4 @@ ARG START_ARG=-Dserver.port=${PORT}
 
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar", ${START_ARG}]
+ENTRYPOINT ["java","-jar","/app.jar"]
