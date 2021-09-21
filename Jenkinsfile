@@ -37,6 +37,7 @@ pipeline {
 	stage('Docker Build') {
             steps {
                 echo "${env.STAGE_NAME} Stage"
+		sh 'docker image prune -a'
 		sh 'docker build -t r0bdiesel/examplejavamavenspringbootjenkinsdockerhub:latest .'
             }
         }
