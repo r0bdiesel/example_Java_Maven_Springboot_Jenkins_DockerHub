@@ -37,7 +37,7 @@ pipeline {
 	stage('Docker Build') {
             steps {
                 echo "${env.STAGE_NAME} Stage"
-		sh 'docker build -t r0bdiesel/example_Java_Maven_Springboot_Jenkins_DockerHub:latest .'
+		sh 'docker build -t r0bdiesel/examplejavamavenspringbootjenkinsdockerhub:latest .'
             }
         }
 	stage('DockerHub Login') {
