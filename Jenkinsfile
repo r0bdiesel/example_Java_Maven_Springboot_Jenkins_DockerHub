@@ -1,7 +1,7 @@
 pipeline {
     environment {
 	IN_DOCKER_ENV = fileExists('/.dockerenv')
-	REGISTRY = "r0bdiesel/example_java_ant_ivy_jenkins"
+	REGISTRY = "r0bdiesel/examplejavamavenspringbootjenkinsdockerhub"
 	DOCKERHUB_CREDENTIALS = credentials('dockerhub')
     }
     agent any
