@@ -32,3 +32,8 @@ curl -X POST localhost:8090/api/addCompany -d "{"id":2,"name":"you"}" -H "Conten
 
 curl -X GET localhost:8090/api/company/1
 ```
+
+
+```
+docker run -p 8090:8090 r0bdiesel/examplejavamavenspringbootjenkinsdockerhub:latest
+```
