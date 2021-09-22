@@ -34,6 +34,11 @@ pipeline {
 		sh 'mvn package'
             }
         }
+	stage('Manual Approval') {
+            steps {
+		input "Deploy to DockerHub?"
+            }
+        }
 	stage('Docker Build') {
             steps {
                 echo "${env.STAGE_NAME} Stage"
